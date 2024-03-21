@@ -12,7 +12,7 @@ RUN pip install flask
 RUN pip install torch torchaudio torchvision flask Gunicorn speechbrain==0.5.16 transformers soundfile
 
 # Stage 2
-FROM python:3-alpine AS runner
+FROM python:3.12.2 AS runner
  
 WORKDIR /app
  
