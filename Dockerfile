@@ -8,6 +8,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
  
 COPY requirements.txt .
 # RUN pip install -r requirements.txt
+RUN pip install flask
 RUN pip install torch torchaudio torchvision flask Gunicorn speechbrain==0.5.16 transformers soundfile
 
 # Stage 2
