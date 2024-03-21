@@ -1,4 +1,4 @@
-FROM python:3-alpine AS builder
+FROM python:3.12.2 AS builder
  
 WORKDIR /app
  
@@ -9,7 +9,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 COPY requirements.txt .
 # RUN pip install -r requirements.txt
 RUN pip install flask
-RUN pip install  torchaudio torchvision flask Gunicorn speechbrain==0.5.16 transformers soundfile
+RUN pip install torch torchaudio torchvision flask Gunicorn speechbrain==0.5.16 transformers soundfile
 
 # Stage 2
 FROM python:3-alpine AS runner
