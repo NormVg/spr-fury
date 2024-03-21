@@ -1,0 +1,7 @@
+torch
+torchaudio
+flask
+Gunicorn
+speechbrain==0.5.16
+transformers
+soundfile
